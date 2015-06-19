@@ -28,10 +28,15 @@ shinyUI(fluidPage(
                 textOutput("xmean"), 
                 textOutput("ymean"),
                 textOutput("zmean"), br(),
-                webGLOutput('My3DPlot')
-                
+                webGLOutput('My3DPlot') ,
+                tabsetPanel(
+                        tabPanel(p(icon("line-chart"), "Documentation"),
+                                   htmlOutput("Documentation")
+                                 )
+                )
         )
         )
-        
-))
+)
+)
+
 

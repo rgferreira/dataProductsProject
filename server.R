@@ -16,6 +16,14 @@ shinyServer(
                                                   mean(mtcars[ ,input$yvar]))})
                 output$zmean <- renderText({paste(input$zvar, " mean: ",
                                                   mean(mtcars[ ,input$zvar]))})
+                output$Documentation <- renderUI({
+                        str0 <- paste("Documentation: How to proceed")
+                        str1 <- paste("- Select variables to render")
+                        str2 <- paste("- Rotate (orbit) the axis dragging with your mouse")
+                        str3 <- paste("- Zoom in/out scrolling with your mouse or zooming with trackpads")
+                        str4 <- paste("- Choose whether to show the car model labels or not (checkbox)")
+                        HTML(paste(str0, str1, str2, str3, sep= "<br/>"))
+                })
                 output$My3DPlot <- renderWebGL({
                         #output$names <- names(mtcars)
                         xvar <- input$xvar
@@ -48,7 +56,6 @@ shinyServer(
                                 rownames(mtcars),
                                 rownames(mtcars)), cex = 0.5, adj = 0.5)
                         } else {
-                        
                         }
                 })
         }

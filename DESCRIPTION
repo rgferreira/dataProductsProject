@@ -1,7 +1,7 @@
-Title: Telephones by region
-Author: Jeff Allen <jeff@rstudio.com>
-AuthorUrl: http://www.rstudio.com/
-License: MIT
+Title: Interactive 3D Plotting from data sets in R
+Author: Rafa Gonzalez <rgferreira@gmail.com>
+AuthorUrl: http://www.rpubs.com/rgferreira
+License: Coursera
 DisplayMode: Showcase
 Tags: sidebarlayout helptext selectinput
 Type: Shiny
